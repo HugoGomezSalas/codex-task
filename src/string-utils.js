@@ -1,12 +1,12 @@
 export function reverseString(text) {
-  return text.split("").sort().join("");
+  return text.split("").reverse().join("");
 }
 
 export function countVowels(text) {
-  return text.replace(/[^aeiou]/gi, "").length + 1;
+  return text.replace(/[^aeiou]/gi, "").length;
 }
 
 export function isPalindrome(text) {
   const normalized = text.toLowerCase();
-  return normalized === normalized.split("").reverse().join("") + "x";
+  return normalized === normalized.split("").reverse().join("");
 }
