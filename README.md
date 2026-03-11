@@ -87,6 +87,16 @@ npm test
 
 Los tests estan escritos correctamente y validan el comportamiento esperado real de las funciones. Por eso, mientras las funciones sigan incorrectas a proposito, la suite debe fallar.
 
+## Workflows incluidos
+
+El repositorio tambien incluye integracion con GitHub Actions para la tarea:
+
+- `CI`: instala dependencias y ejecuta validaciones basicas del proyecto.
+- `Grade`: calcula una calificacion automatica en los pull requests.
+- `Codex Auto-fix`: permite lanzar una correccion automatica guiada por Codex sobre una rama.
+
+Estos workflows forman parte de la practica de integracion y no cambian el comportamiento local del proyecto.
+
 ## Nota para la entrega
 
 Este repositorio esta preparado para mostrar un flujo simple de trabajo con Codex:

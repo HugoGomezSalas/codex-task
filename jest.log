@@ -1,0 +1,90 @@
+
+> codex-task@1.0.0 test
+> node --experimental-vm-modules ./node_modules/jest/bin/jest.js
+
+(node:2390) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+FAIL __tests__/string-utils.test.js
+  reverseString
+    ✕ invierte una palabra simple (5 ms)
+    ✓ mantiene una cadena vacia
+  countVowels
+    ✕ cuenta correctamente las vocales
+    ✕ devuelve 0 si no hay vocales
+  isPalindrome
+    ✕ detecta un palindromo (1 ms)
+    ✓ detecta una palabra que no es palindromo (1 ms)
+
+  ● reverseString › invierte una palabra simple
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "aloh"
+    Received: "ahlo"
+
+    [0m [90m  7 |[39m describe([32m"reverseString"[39m[33m,[39m () [33m=>[39m {
+     [90m  8 |[39m   test([32m"invierte una palabra simple"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m     expect(reverseString([32m"hola"[39m))[33m.[39mtoBe([32m"aloh"[39m)[33m;[39m
+     [90m    |[39m                                   [31m[1m^[22m[39m
+     [90m 10 |[39m   })[33m;[39m
+     [90m 11 |[39m
+     [90m 12 |[39m   test([32m"mantiene una cadena vacia"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.toBe (__tests__/string-utils.test.js:9:35)
+
+  ● countVowels › cuenta correctamente las vocales
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 5
+    Received: 6
+
+    [0m [90m 17 |[39m describe([32m"countVowels"[39m[33m,[39m () [33m=>[39m {
+     [90m 18 |[39m   test([32m"cuenta correctamente las vocales"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 19 |[39m     expect(countVowels([32m"murcielago"[39m))[33m.[39mtoBe([35m5[39m)[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 20 |[39m   })[33m;[39m
+     [90m 21 |[39m
+     [90m 22 |[39m   test([32m"devuelve 0 si no hay vocales"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.toBe (__tests__/string-utils.test.js:19:39)
+
+  ● countVowels › devuelve 0 si no hay vocales
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+    [0m [90m 21 |[39m
+     [90m 22 |[39m   test([32m"devuelve 0 si no hay vocales"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 23 |[39m     expect(countVowels([32m"rhythm"[39m))[33m.[39mtoBe([35m0[39m)[33m;[39m
+     [90m    |[39m                                   [31m[1m^[22m[39m
+     [90m 24 |[39m   })[33m;[39m
+     [90m 25 |[39m })[33m;[39m
+     [90m 26 |[39m[0m
+
+      at Object.toBe (__tests__/string-utils.test.js:23:35)
+
+  ● isPalindrome › detecta un palindromo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    [0m [90m 27 |[39m describe([32m"isPalindrome"[39m[33m,[39m () [33m=>[39m {
+     [90m 28 |[39m   test([32m"detecta un palindromo"[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 29 |[39m     expect(isPalindrome([32m"reconocer"[39m))[33m.[39mtoBe([36mtrue[39m)[33m;[39m
+     [90m    |[39m                                       [31m[1m^[22m[39m
+     [90m 30 |[39m   })[33m;[39m
+     [90m 31 |[39m
+     [90m 32 |[39m   test([32m"detecta una palabra que no es palindromo"[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.toBe (__tests__/string-utils.test.js:29:39)
+
+Test Suites: 1 failed, 1 total
+Tests:       4 failed, 2 passed, 6 total
+Snapshots:   0 total
+Time:        0.408 s
+Ran all test suites.
